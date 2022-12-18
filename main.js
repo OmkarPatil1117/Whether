@@ -28,7 +28,8 @@ let getData = (city)=> {
 		.catch(err => console.error(err));
 }
 getData();
-document.querySelector(".btn-outline-success").addEventListener("click", ()=> {
+document.querySelector(".btn-outline-success").addEventListener("click", (e)=> {
+	e.preventDefault();
 	let data = document.querySelector(".form-control").value;
 	getData(data)
 })
